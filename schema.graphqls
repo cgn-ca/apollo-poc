@@ -1,0 +1,11 @@
+directive @auth on FIELD_DEFINITION | OBJECT
+
+type Demo @auth {
+    myDemo: String @auth
+    secondProp: String
+}
+
+type Query {
+  demo: Demo @auth
+  demo2: Demo
+}
